@@ -188,7 +188,8 @@ ID:<span class="hljs-number">3</span>,Name:王五
 <p data-nodeid="1367">Gin 框架是一个在 Github 上开源的 Web 框架，封装了很多 Web 开发需要的通用功能，并且性能也非常高，可以让我们很容易地写出 RESTful API。</p>
 <p data-nodeid="1368">Gin 框架其实是一个模块，也就是 Go Mod，所以采用 Go Mod 的方法引入即可。我在第 18讲的时候详细介绍过如何引入第三方的模块，这里再复习一下。</p>
 <p data-nodeid="1369">首先需要下载安装 Gin 框架，安装代码如下：</p>
-<pre class="lang-shell" data-nodeid="1370"><code data-language="shell"><span class="hljs-meta">$</span><span class="bash"> go get -u github.com/gin-gonic/gin</span>
+<pre class="lang-shell" data-nodeid="1370"><code data-language="shell"><span class="hljs-meta">$</span><span class="bash"> go env -w GOPROXY=https://goproxy.cn,direct</span>
+<span class="hljs-meta">$</span><span class="bash"> go get -u github.com/gin-gonic/gin</span>
 </code></pre>
 <p data-nodeid="1371">然后就可以在 Go 语言代码中导入使用了，导入代码如下：</p>
 <pre class="lang-go" data-nodeid="1372"><code data-language="go"><span class="hljs-keyword">import</span> <span class="hljs-string">"github.com/gin-gonic/gin"</span>
